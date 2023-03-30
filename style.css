@@ -1,0 +1,100 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    overflow-x: hidden; /* to stop scrolling in the x axis */
+    overflow-y: auto;
+    height: 100vh; /* to maintain the height according to the height of the viewport */
+    perspective: 10px;  /* to enable the distance between in betweeen user and the display */
+}
+
+.container{
+    position: relative;/*  relative to the wrapper section */
+    display: flex; /* to center the elements  */
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d; /* to save all the previous settings or changes made  */
+    z-index: -1; 
+}
+
+.background , .foreground {
+    position: absolute; /* to overlap things to each other */
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+}   
+
+.background{
+    transform: translateZ(-40px) scale(6);
+}
+.foreground{
+    transform: translateZ(-20px) scale(3);
+}
+
+h1{
+    position: absolute;
+    top: 3rem;
+    font-family: 'Mulish', sans-serif;
+    font-size: 10rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px rgba(0, 0,0, 0.3);
+}
+
+section{
+    background-color: rgb(45,45,45);
+    color: white;
+    padding: 5rem 0;
+}
+
+.secHeading{
+    font-size:4rem;
+    padding: 0 10rem ;
+}
+
+.text{
+    font-size: 1.2rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+    font-family: 'Roboto', sans-serif;
+    word-spacing: 1px;
+}
+
+.bg{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-size: cover;/* to make a proper fit of the background image, it is same as OBJECT-FIT.   */
+    background-position: center;/* to center the image in the background. */
+    background-attachment: fixed; /*  image will stay at its place and we can scroll things over it */
+}
+
+.description{
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding: 10px 10px 10px 10px;
+    display: inline-block;
+    margin-left: 50%;
+    top: 50%;
+    font-size: 3rem ;
+    transform: translate(-50%, 0);
+    font-weight: 600;
+    
+}
+
+.bg2{
+    background-image: url(images/sport-1.jpg);
+}
+
+.bg3{
+    background-image: url(images/sport-2.jpg);
+}
+
+.bg4{
+    background-image: url(images/sport-3.jpg);
+}
